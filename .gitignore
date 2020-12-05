@@ -1,10 +1,23 @@
-kubectl create secret generic pgpassword --from-literal PGPASSWORD=mypassword123
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
-chmod 700 get_helm.sh
-./get_helm.sh
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-helm install my-release ingress-nginx/ingress-nginx
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
+# testing
+/coverage
 
-helm install happy-panda stable/mariadb
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
