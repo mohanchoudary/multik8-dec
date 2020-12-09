@@ -11,6 +11,6 @@ docker push mohanchoudary/multi-server:$SHA
 docker push mohanchoudary/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/server-deployment server=mohanchoudary/multi-server:$SHA
+kubectl set image deployments/server-deployment server=cygnetops/multi-server-pgfix-5-11
 kubectl set image deployments/client-deployment client=mohanchoudary/multi-client:$SHA
 kubectl set image deployments/worker-deployment worker=mohanchoudary/multi-worker:$SHA
